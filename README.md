@@ -53,7 +53,7 @@ nsenter-ctn ctn2 -n tcpdump -i eth0 arp
 
 - SO_REUSEPORT eBPF:
     - [Video](https://www.youtube.com/watch?v=CgB7JpSL5cs&t=8212s)
-    - [PDF](https://www.youtube.com/watch?v=CgB7JpSL5cs&t=8212s)
+    - [PDF](https://linuxplumbersconf.org/event/11/contributions/946/attachments/783/1472/Socket_migration_for_SO_REUSEPORT.pdf)
 - [Learning the Linux Kernel with tracing](https://www.youtube.com/watch?v=JRyrhsx-L5Y&t=710s)
 - [Understanding and Troubleshooting the eBPF Datapath in Cilium](https://www.youtube.com/watch?v=Kmm8Hl57WDU&t=760s)
 - [Cilium overlay datapath egress deep dive 1](https://www.youtube.com/watch?v=Ocy2pFhNFfE)
