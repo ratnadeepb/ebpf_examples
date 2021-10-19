@@ -2,7 +2,8 @@
 
 #[repr(C)]
 pub struct PacketLog {
-    pub ipv4_address: u32,
+    pub src_addr: u32,
+    pub dst_addr: u32,
     pub action: u32,
 }
 

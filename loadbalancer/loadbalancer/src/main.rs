@@ -53,8 +53,9 @@ async fn main() -> Result<(), anyhow::Error> {
                     let buf = &mut buffers[i];
                     let ptr = buf.as_ptr() as *const PacketLog;
                     let data = unsafe { ptr.read_unaligned() };
-                    let src_addr = net::Ipv4Addr::from(data.ipv4_address);
-                    println!("LOG: SRC {}, ACTION {}", src_addr, data.action);
+                    let src_addr = net::Ipv4Addr::from(data.src_addr);
+                    let dst_addr = net::Ipv4Addr::from(data.dst_addr);
+                    println!("LOG: SRC {} DST: {} ACTION {}", src_addr, dst_addr, data.action);
                 }
             }
         });
