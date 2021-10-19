@@ -18,8 +18,7 @@ const ETH_HDR_LEN: usize = mem::size_of::<ethhdr>();
 static mut EVENTS: PerfEventArray<PacketLog> =
     PerfEventArray::<PacketLog>::with_max_entries(1024, 0);
 
-// #[xdp(name = "loadbalancer")]
-#[xdp]
+#[xdp(name = "loadbalancer")]
 pub fn loadbalancer(ctx: XdpContext) -> u32 {
     match unsafe { try_loadbalancer(ctx) } {
         Ok(ret) => ret,

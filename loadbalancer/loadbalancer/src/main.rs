@@ -33,7 +33,7 @@ async fn main() -> Result<(), anyhow::Error> {
     let data = fs::read(path)?;
     let mut bpf = Bpf::load(&data)?;
 
-    let probe: &mut Xdp = bpf.program_mut("xdp")?.try_into()?;
+    let probe: &mut Xdp = bpf.program_mut("loadbalancer")?.try_into()?;
     probe.load()?;
     probe.attach(&iface, XdpFlags::default())?;
 
