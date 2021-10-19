@@ -1,0 +1,2 @@
+[workspace]
+members = ["loadbalancer", "loadbalancer-common", "xtask"]

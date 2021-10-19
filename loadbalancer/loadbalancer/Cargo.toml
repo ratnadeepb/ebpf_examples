@@ -1,0 +1,19 @@
+[package]
+name = "loadbalancer"
+version = "0.1.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+# aya = { git = "https://github.com/aya-rs/aya", branch="main" }
+aya = { git = "https://github.com/aya-rs/aya", branch="main", features=["async_tokio"] }
+loadbalancer-common = { path = "../loadbalancer-common", features=["userspace"] }
+anyhow = "1.0.42"
+ctrlc = "3.2"
+bytes = "1.1.0"
+tokio = { version = "1.12.0", features = ["full"]}
+structopt = { version = "0.3"}
+
+[[bin]]
+name = "loadbalancer"
+path = "src/main.rs"

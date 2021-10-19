@@ -1,0 +1,26 @@
+[package]
+name = "loadbalancer-ebpf"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+aya-bpf = { git = "http://github.com/aya-rs/aya", branch = "main" }
+aya-bpf-cty = { git = "http://github.com/aya-rs/aya", branch = "main" }
+loadbalancer-common = { path = "../loadbalancer-common" }
+memoffset = "0.6.4"
+
+[[bin]]
+name = "loadbalancer"
+path = "src/main.rs"
+
+[profile.dev]
+panic = "abort"
+debug = 1
+opt-level = 2
+overflow-checks = false
+
+[profile.release]
+panic = "abort"
+
+[workspace]
+members = []
