@@ -1,3 +1,4 @@
+// https://github.com/lmb/ship-bpf-with-go/blob/main/main.go
 package main
 
 import "syscall"
